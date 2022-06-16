@@ -11,7 +11,7 @@
 //   return false;
 // };
 // console.log(isAdult(0));
-
+/*--------------------------------------------------------------------------------------------------------
 // /**
 //  *
 //  * @param {number} value1
@@ -24,7 +24,7 @@
 // };
 
 // console.log(checkmMultiplicityOfTwo(20, 3));
-
+/*--------------------------------------------------------------------------------------------------------
 // /**
 //  *
 //  * @param {number} value
@@ -35,7 +35,7 @@
 // };
 
 // console.log(isNumMultiple(63));
-
+/*--------------------------------------------------------------------------------------------------------
 // /**
 //  *
 //  * @param {number} value1
@@ -52,7 +52,7 @@
 // };
 
 // console.log(checkTriangular(5, 3, 10));
-
+/*--------------------------------------------------------------------------------------------------------
 // /**
 //  *
 //  * @param {number} value1
@@ -67,7 +67,7 @@
 // };
 
 // console.log(checkParityOfTwoNum(6, 5));
-
+/*--------------------------------------------------------------------------------------------------------
 // /**
 //  *
 //  * @param {number} a
@@ -90,7 +90,7 @@
 // };
 
 // console.log(calculateSquareEquation(5, 3, 7));
-
+/*--------------------------------------------------------------------------------------------------------
 // /**
 //  *
 //  * @param {number} num1
@@ -105,7 +105,7 @@
 // };
 
 // console.log(isNumMeasure(70, 20, 90));
-
+/*--------------------------------------------------------------------------------------------------------
 // const userChoose = prompt("Enter number language:\n1-ua\n2-en\n3-fr\n4-pl");
 // if (userChoose === "1") {
 //   console.log("Вітаю");
@@ -118,7 +118,7 @@
 // } else {
 //   console.log("404");
 // }
-
+/*--------------------------------------------------------------------------------------------------------
 // const userChoose = prompt(
 //   "Enter number of the month:\n1-january\n2-february\n3-march\n4-april\n5-may\n6-june\n7-july\n8-august\n9-september\n10-october\n11-november\n12-december"
 // );
@@ -156,7 +156,7 @@
 //     console.log("autumn");
 //     break;
 // }
-
+/*--------------------------------------------------------------------------------------------------------
 // const userChoose = prompt(
 //   "Enter number of the month:\n1-january\n2-february\n3-march\n4-april\n5-may\n6-june\n7-july\n8-august\n9-september\n10-october\n11-november\n12-december"
 // );
@@ -199,36 +199,487 @@
 // } else {
 //   console.log(404);
 // }
+/*--------------------------------------------------------------------------------------------------------
+// const userInputAge = prompt("age:");
+// const userAge = Number(userInputAge);
 
-const userInputAge = prompt("age:");
-const userAge = Number(userInputAge);
+// if (
+//   userInputAge === "" ||
+//   userInputAge === null ||
+//   isNaN(userAge) ||
+//   userAge < 0 ||
+//   userAge > 150
+// ) {
+//   console.log("error");
+// } else if (userAge < 2) {
+//   console.log("baby");
+// }
+// else if (userAge < 6) {
+//   console.log("kinder");
+// }
+// else if (userAge < 12) {
+//   console.log("child");
+// }
+// else if (userAge < 18) {
+//   console.log("tinager");
+// }
+// else if (userAge < 65) {
+//   console.log("adult");
+// }
+// else if (userAge < 100) {
+//   console.log("old");
+// }
+// else if (userAge < 150) {
+//   console.log("super!");
+// }
+/*--------------------------------------------------------------------------------------------------------
+// /**
+//  *
+//  * @param {number} num1
+//  * @returns {string}
+//  */
+// const isNumberMultiple = function (num1) {
+//   return num1 % 2 === 0 ? "Even" : "Odd";
+// };
+// console.log(isNumberMultiple(12));
 
-if (
-  userInputAge === "" ||
-  userInputAge === null ||
-  isNaN(userAge) ||
-  userAge < 0 ||
-  userAge > 150
-) {
-  console.log("error");
-} else if (userAge < 2) {
-  console.log("baby");
+// const getFactorial = function (limit = 4) {
+//   let factorial = 1;
+//   for (let i = 1; i <= limit; i++) {
+//     factorial *= i;
+//   }
+//   return factorial;
+// };
+/*--------------------------------------------------------------------------------------------------------
+// const getPower = function (base, pow) {
+//   let res = 1;
+//   for (let i = 0; i < pow; i++) {
+//     res *= base;
+//   }
+//   return res;
+// };
+/*--------------------------------------------------------------------------------------------------------
+// const cat1 = {
+//   name: "Misha",
+//   isMale: false,
+//   age: 3,
+//   color: "white",
+//   jump: function () {
+//     return "i'm jumping";
+//   },
+//   sleep: function () {
+//     return "i'm sleeping";
+//   },
+// };
+
+// const cat2 = {
+//   name: "Mars",
+//   isMale: true,
+//   age: 4,
+//   color: "grey",
+//   jump: function () {
+//     return "i'm jumping";
+//   },
+//   sleep: function () {
+//     return "i'm sleeping";
+//   },
+// };
+
+// console.log(cat1);
+/*--------------------------------------------------------------------------------------------------------
+// function User(fname, lname, isMale, age) {
+//   this.fname = fname;
+//   this.lname = lname;
+//   this.isMale = isMale;
+//   this.age = age;
+//   this.fullName = function () {
+//     return this.fname + " " + this.lname;
+//   };
+// }
+
+// const user1 = new User("Jared", "Limb", true, 25);
+// const user2 = new User("Eva", "Simpson", false, 15);
+// const user3 = new User("Alex", "Rudel", true, 26);
+/*--------------------------------------------------------------------------------------------------------
+// function Country(name, population, area) {
+//   this.name = name;
+//   this.population = population;
+//   this.area = area;
+//   this.getDensity = function () {
+//     return this.population / this.area;
+//   };
+// }
+
+// const country1 = new Country("Ukraine", 41167336, 603628);
+// const country2 = new Country("Japan", 125502000, 377975);
+// const country3 = new Country("Australia", 26010900, 7692024);
+/*--------------------------------------------------------------------------------------------------------
+// function Kettle(maxVolume) {
+//   this.maxVolume = maxVolume;
+//   this.volume = 0;
+
+//   this.addWater = function (value) {
+//     this.volume += value;
+//     return this.volume;
+//   };
+//   this.drainWater = function (value) {
+//     this.volume -= value;
+//     return this.volume;
+//   };
+// }
+
+// const pot = new Kettle();
+/*--------------------------------------------------------------------------------------------------------
+// function createMultipleTable() {
+//   const table = {};
+//   for (let i = 1; i <= 10; i++) {
+//     for (let j = 1; j <= 10; j++) {
+//       table[`${i}*${j}`] = i * j;
+//     }
+//   }
+//   return table;
+// }
+/*--------------------------------------------------------------------------------------------------------
+// function MyArray() {
+//   this.length = 0;
+//   this.push = function (element) {
+//     this[this.length] = element;
+//     return ++this.length;
+//   };
+// }
+/*--------------------------------------------------------------------------------------------------------
+// function MyArrayPrototype() {
+//   this.push = function (element) {
+//     this[this.length] = element;
+//     return ++this.length;
+//   };
+// }
+
+// const myArrayPrototype = new MyArrayPrototype();
+// MyArray.prototype = myArrayPrototype;
+
+// const myArr = new MyArray();
+// const myArr2 = new MyArray();
+// myArr.push(11);
+// console.log(myArr);
+// /*--------------------------------*/
+// const arr = [];
+// const arr2 = [];
+// arr.push(55);
+// console.log(arr);
+/*--------------------------------------------------------------------------------------------------------
+// this.some = function (callback) {
+//   for (let i = 0; i < this.length; i++) {
+//     if (callback(this[i], i, this)) {
+//       return true;
+//     }
+//   }
+//   return false;
+// };
+/*--------------------------------------------------------------------------------------------------------
+// this.filter = function(callback){
+//   const newMyArr = new MyArray();
+//   for (let i = 0; i < this.length; i++){
+//     if(callback(this[i], i, this)){
+//       newMyArr.push(this[i])
+//     }
+//   }
+//   return newMyArr;
+// }
+/*--------------------------------------------------------------------------------------------------------
+// /**
+//  *
+//  * @param {string} fname
+//  * @param {string} lname
+//  * @param {number} age
+//  * @param {boolean} isMale
+//  * @param {string} email
+//  * @param {boolean} isSubscribed
+//  */
+// function User(fname, lname, age, isMale, email, isSubscribed = false) {
+//   this.fname = fname;
+//   this.lname = lname;
+//   this.age = age;
+//   this.isMale = isMale;
+//   this.email = email;
+//   this.isSubscribed = isSubscribed;
+// }
+// function UserPrototype() {
+//   this.fullName = function () {
+//     return `${this.fname} ${this.lname}`;
+//   };
+// }
+// User.prototype = new UserPrototype();
+
+// function createUsers(amount = 1) {
+//   const arrUsers = [];
+//   for (let i = 0; i < amount; i++) {
+//     const user = new User(
+//       `Elon${i}`,
+//       `Musk${i}`,
+//       Math.ceil(Math.random() * (60 - 20) + 20),
+//       Math.random() > 0.5,
+//       `emailEM${i}@gmail.com`
+//     );
+//     arrUsers.push(user);
+//   }
+//   return arrUsers;
+// }
+// const users = createUsers(20);
+// console.table(users);
+
+// const arrFullName = users.map(function (user) {
+//   return user.fullName();
+// });
+// console.table(arrFullName);
+
+// const arrOlderAge = users.filter(function (user) {
+//   return user.age > 40;
+// });
+// console.table(arrOlderAge);
+
+// users.forEach(function (user) {
+//   user.isSubscribed = Math.random() > 0.5;
+// });
+// console.table(users);
+
+// const newArr = users
+//   .filter(function (user) {
+//     return user.age > 40;
+//   })
+//   .filter(function (user) {
+//     return user.isMale === false;
+//   })
+//   .filter(function (user) {
+//     return user.isSubscribed === true;
+//   })
+//   .map(function (user) {
+//     return user.email;
+//   });
+// console.table(newArr);
+
+// const newArrMan = users
+//   .filter(function (user) {
+//     return user.isMale === true;
+//   })
+//   .filter(function (user) {
+//     return user.age < 40;
+//   })
+//   .filter(function (user) {
+//     return user.isSubscribed === false;
+//   })
+//   .map(function (user) {
+//     return user.fullName();
+//   });
+
+// console.table(newArrMan);
+/*--------------------------------------------------------------------------------------------------------*/
+
+"use strict";
+
+// const site = {
+//   title: "green site",
+//   headers: ["Header 1", "Header 2", "Header 3"],
+//   showHeaders() {
+//     this.headers.forEach((header)=> {
+//       console.log(`${header} | ${this.title}`);
+//     });
+//   },
+// };
+// site.showHeaders();
+/*--------------------------------------------------------------------------------------------------------*/
+
+// const sum = (a, b) => {
+//   return a + b;
+// };
+
+// const sum = (a, b) => a + b;
+// console.log(sum(5, 7));
+
+// const square = (n) => n * n;
+// console.log(square(57));
+
+// const logWord = (word) => console.log(word);
+// logWord("qwerty");
+/*--------------------------------------------------------------------------------------------------------*/
+
+// const f1 = function (...restArguments) {
+//   console.log(restArguments);
+// };
+
+// const f2 = (num1,...restArguments) => {
+//   console.log(restArguments);
+// };
+
+// // console.dir(f1);
+// // console.dir(f2);
+
+// f1(1, 1, 1, 1);
+// f2(2, 2, 2, 2);
+/*--------------------------------------------------------------------------------------------------------*/
+
+// const sum1 = (...args) => {
+//   let sum1 = 0;
+//   for (let i = 0; i < args.length; i++) {
+//     sum1 += args[i];
+//   }
+//   return sum1;
+// };
+
+// console.log(sum1(2, 3, 5, 10, 20, 1, 20));
+/*--------------------------------------------------------------------------------------------------------*/
+
+// const sumNum = (...num) => num.reduce((acum, vol) => acum + vol);
+// sumNum(1, 2, 3, 4);
+/*--------------------------------------------------------------------------------------------------------*/
+
+// const arr1 = ['a','c','e','g','i','k','m','o','q','s','u','w','y'];
+// const arr2 = ['b','d','f','h','j','l','n','p','r','t','v','x','z'];
+
+// const arr3 = [...arr1,...arr2];
+// console.log(arr3);
+/*--------------------------------------------------------------------------------------------------------*/
+
+// const power = (base, pow) => {
+//   if (pow === 0) {
+//     return 1;
+//   }
+//   return base * power(base, pow - 1);
+// };
+// console.log(power(2, 3));
+/*--------------------------------------------------------------------------------------------------------*/
+
+// const str = "to Be or NoT To bE";
+// const words = str.split(" ");
+// const lowerWords = words.map((word) => {
+//   return word.toLowerCase();
+// });
+
+// const sentence = lowerWords
+//   .map((word) => {
+//     return word[0].toUpperCase() + word.substring(1);
+//   })
+//   .join(" ");
+
+// console.log(sentence);
+/*--------------------------------------------------------------------------------------------------------*/
+// const str1 = "to Be or NoT To bE";
+// const countVowels = (str1, arr = ["a", "e", "i", "o", "u", "y"]) => {
+//   return str1
+//     .toLowerCase()
+//     .split("")
+//     .filter((letter) => arr.includes(letter)).length;
+// };
+/*--------------------------------------------------------------------------------------------------------*/
+
+// class UserClass {
+//   constructor(fname, sname, age) {
+//     this.fname = fname;
+//     this.sname = sname;
+//     this.age = age;
+//   }
+//   get age() {
+//     return this._age;
+//   }
+//   set age(age) {
+//     if (typeof age !== "number") {
+//       throw new TypeError("Age must be number");
+//     }
+//     if (age < 0 || age > 150) {
+//       throw new RangeError("Age must be 0...150");
+//     }
+//     this._age = age;
+//   }
+//   getFullName() {
+//     return `${this.fname} ${this.sname}`;
+//   }
+//   isAdult = () => this._age >= 18;
+// }
+/*--------------------------------------------------------------------------------------------------------*/
+
+class Worker {
+  constructor(fname, lname, rate, days) {
+    this.fname = fname;
+    this.lname = lname;
+    this.rate = rate;
+    this.days = days;
+  }
+  get days() {
+    return this._days;
+  }
+  set days(days) {
+    if (typeof days !== "number") {
+      throw new TypeError("Days must be number");
+    }
+    if (days < 1 || days > 26) {
+      throw new RangeError("Days must be 1...26");
+    }
+    this._days = days;
+  }
+  getSalary = () => this.rate * this._days;
 }
-else if (userAge < 6) {
-  console.log("kinder");
+
+const workerNew = new Worker("Tom", "Holding", 88.5, 13);
+/*--------------------------------------------------------------------------------------------------------*/
+
+class Auto {
+  constructor(ownWeight) {
+    this.ownWeight = ownWeight;
+  }
+  get ownWeight() {
+    return this._ownWeight;
+  }
+  set ownWeight(weight) {
+    if (typeof weight !== "number") {
+      throw new TypeError("Weight must be number");
+    }
+    if (weight < 1500 || weight > 2000) {
+      throw new RangeError("Weight must be 1500...2000");
+    }
+    this._ownWeight = weight;
+  }
+  getFullWeight(objFuel) {
+    if (Fuel.isFuel(objFuel) === false) {
+      throw new TypeError("must be fuel");
+    }
+    return this.ownWeight + objFuel.weight;
+  }
 }
-else if (userAge < 12) {
-  console.log("child");
+
+class Fuel {
+  constructor(volume, dencity) {
+    this.volume = volume;
+    this.dencity = dencity;
+  }
+  get volume() {
+    return this._volume;
+  }
+  set volume(volume) {
+    if (typeof volume !== "number") {
+      throw new TypeError("Volume must be number");
+    }
+    if (volume < 0 || weight > 40) {
+      throw new RangeError("Volume must be 0...40");
+    }
+    this._volume = volume;
+  }
+  get dencity() {
+    return this._dencity;
+  }
+  set dencity(dencity) {
+    if (typeof dencity !== "number") {
+      throw new TypeError("Dencity must be number");
+    }
+    if (dencity < 0.65 || weight > 0.85) {
+      throw new RangeError("Dencity must be 0.65...0.85");
+    }
+    this._dencity = dencity;
+  }
+  get weight() {
+    return this._volume * this._dencity;
+  }
+  static isFuel(obj) {
+    return obj instanceof Fuel;
+  }
 }
-else if (userAge < 18) {
-  console.log("tinager");
-}
-else if (userAge < 65) {
-  console.log("adult");
-}
-else if (userAge < 100) {
-  console.log("old");
-}
-else if (userAge < 150) {
-  console.log("super!");
-}
+
