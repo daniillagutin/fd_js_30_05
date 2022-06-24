@@ -597,89 +597,370 @@
 // }
 /*--------------------------------------------------------------------------------------------------------*/
 
-class Worker {
-  constructor(fname, lname, rate, days) {
-    this.fname = fname;
-    this.lname = lname;
-    this.rate = rate;
-    this.days = days;
-  }
-  get days() {
-    return this._days;
-  }
-  set days(days) {
-    if (typeof days !== "number") {
-      throw new TypeError("Days must be number");
-    }
-    if (days < 1 || days > 26) {
-      throw new RangeError("Days must be 1...26");
-    }
-    this._days = days;
-  }
-  getSalary = () => this.rate * this._days;
-}
+// class Worker {
+//   constructor(fname, lname, rate, days) {
+//     this.fname = fname;
+//     this.lname = lname;
+//     this.rate = rate;
+//     this.days = days;
+//   }
+//   get days() {
+//     return this._days;
+//   }
+//   set days(days) {
+//     if (typeof days !== "number") {
+//       throw new TypeError("Days must be number");
+//     }
+//     if (days < 1 || days > 26) {
+//       throw new RangeError("Days must be 1...26");
+//     }
+//     this._days = days;
+//   }
+//   getSalary = () => this.rate * this._days;
+// }
 
-const workerNew = new Worker("Tom", "Holding", 88.5, 13);
+// const workerNew = new Worker("Tom", "Holding", 88.5, 13);
 /*--------------------------------------------------------------------------------------------------------*/
 
-class Auto {
-  constructor(ownWeight) {
-    this.ownWeight = ownWeight;
-  }
-  get ownWeight() {
-    return this._ownWeight;
-  }
-  set ownWeight(weight) {
-    if (typeof weight !== "number") {
-      throw new TypeError("Weight must be number");
-    }
-    if (weight < 1500 || weight > 2000) {
-      throw new RangeError("Weight must be 1500...2000");
-    }
-    this._ownWeight = weight;
-  }
-  getFullWeight(objFuel) {
-    if (Fuel.isFuel(objFuel) === false) {
-      throw new TypeError("must be fuel");
-    }
-    return this.ownWeight + objFuel.weight;
-  }
-}
+// class Auto {
+//   constructor(ownWeight) {
+//     this.ownWeight = ownWeight;
+//   }
+//   get ownWeight() {
+//     return this._ownWeight;
+//   }
+//   set ownWeight(weight) {
+//     if (typeof weight !== "number") {
+//       throw new TypeError("Weight must be number");
+//     }
+//     if (weight < 1500 || weight > 2000) {
+//       throw new RangeError("Weight must be 1500...2000");
+//     }
+//     this._ownWeight = weight;
+//   }
+//   getFullWeight(objFuel) {
+//     if (Fuel.isFuel(objFuel) === false) {
+//       throw new TypeError("must be fuel");
+//     }
+//     return this.ownWeight + objFuel.weight;
+//   }
+// }
 
-class Fuel {
-  constructor(volume, dencity) {
-    this.volume = volume;
-    this.dencity = dencity;
-  }
-  get volume() {
-    return this._volume;
-  }
-  set volume(volume) {
-    if (typeof volume !== "number") {
-      throw new TypeError("Volume must be number");
-    }
-    if (volume < 0 || weight > 40) {
-      throw new RangeError("Volume must be 0...40");
-    }
-    this._volume = volume;
-  }
-  get dencity() {
-    return this._dencity;
-  }
-  set dencity(dencity) {
-    if (typeof dencity !== "number") {
-      throw new TypeError("Dencity must be number");
-    }
-    if (dencity < 0.65 || weight > 0.85) {
-      throw new RangeError("Dencity must be 0.65...0.85");
-    }
-    this._dencity = dencity;
-  }
-  get weight() {
-    return this._volume * this._dencity;
-  }
-  static isFuel(obj) {
-    return obj instanceof Fuel;
-  }
-}
+// class Fuel {
+//   constructor(volume, dencity) {
+//     this.volume = volume;
+//     this.dencity = dencity;
+//   }
+//   get volume() {
+//     return this._volume;
+//   }
+//   set volume(volume) {
+//     if (typeof volume !== "number") {
+//       throw new TypeError("Volume must be number");
+//     }
+//     if (volume < 0 || weight > 40) {
+//       throw new RangeError("Volume must be 0...40");
+//     }
+//     this._volume = volume;
+//   }
+//   get dencity() {
+//     return this._dencity;
+//   }
+//   set dencity(dencity) {
+//     if (typeof dencity !== "number") {
+//       throw new TypeError("Dencity must be number");
+//     }
+//     if (dencity < 0.65 || dencity > 0.85) {
+//       throw new RangeError("Dencity must be 0.65...0.85");
+//     }
+//     this._dencity = dencity;
+//   }
+//   get weight() {
+//     return this._volume * this._dencity;
+//   }
+//   static isFuel(obj) {
+//     return obj instanceof Fuel;
+//   }
+// }
+// const newAuto = new Auto(1700);
+/*--------------------------------------------------------------------------------------------------------*/
+
+// class Animal {
+//   #type;
+//   constructor(name, type, countOfLegs) {
+//     this.name = name;
+//     this.#type = type;
+//     this.countOfLegs = countOfLegs;
+//   }
+//   get countOfLegs() {
+//     return this._countOfLegs;
+//   }
+//   set countOfLegs(countOfLegs) {
+//     if (typeof countOfLegs !== "number") {
+//       throw new TypeError("countOfLegs must be number");
+//     }
+//     if (countOfLegs < 0 || countOfLegs > 4) {
+//       throw new RangeError("countOfLegs must be 0...4");
+//     }
+//     this._countOfLegs = countOfLegs;
+//   }
+//   eat() {
+//     return `${this.name} is eating.`;
+//   }
+//   static isAnimal(obj) {
+//     return obj instanceof Animal;
+//   }
+// }
+
+// const cat = new Animal("Muha", "cat", 4);
+/*--------------------------------------------------------------------------------------------------------*/
+
+// class User {
+//   constructor(fname, lname) {
+//     this.fname = fname;
+//     this.lname = lname;
+//     this._isBan = false;
+//   }
+//   getFullName() {
+//     return `${this.fname} ${this.lname}`;
+//   }
+//   static isUser(obj) {
+//     return obj instanceof User;
+//   }
+//   get isBan() {
+//     return this._isBan;
+//   }
+// }
+
+// class Moderator extends User {
+//   constructor(fname, lname, permission) {
+//     super(fname, lname);
+//     this.permission = permission;
+//   }
+// }
+
+// class Admin extends Moderator {
+//   constructor(fname, lname, permission) {
+//     super(fname, lname, permission);
+//   }
+//   ban(obj) {
+//     if (User.isUser(obj) === false) {
+//       throw new TypeError("must be user");
+//     }
+//     obj._isBan = true;
+//   }
+//   unBan(obj) {
+//     if (User.isUser(obj) === false) {
+//       throw new TypeError("must be user");
+//     }
+//     obj._isBan = false;
+//   }
+// }
+// const admin = new Admin("Elon", "Musk", true);
+/*--------------------------------------------------------------------------------------------------------*/
+
+// class Squirrel {
+//   constructor(name, color) {
+//     this.name = name;
+//     this.color = color;
+//   }
+//   static isSquirrel(obj) {
+//     return obj instanceof Squirrel;
+//   }
+//   jump() {
+//     return `${this.name} is jumping`;
+//   }
+// }
+
+// class FlySquirrel extends Squirrel {
+//   constructor(name, color, maxDistanse) {
+//     super(name, color);
+//     this.maxDistanse = maxDistanse;
+//   }
+//   get maxDistanse() {
+//     return this._maxDistanse;
+//   }
+//   set maxDistanse(maxDistanse) {
+//     if (typeof maxDistanse !== "number") {
+//       throw new TypeError("maxDistanse must be number");
+//     }
+//     if (maxDistanse < 0 || maxDistanse > 90) {
+//       throw new RangeError("maxDistanse must be 0...90");
+//     }
+//     this._maxDistanse = maxDistanse;
+//   }
+//   fly(dist) {
+//     if (dist <= this._maxDistanse) {
+//       return `${this.name} is flying at ${dist}`;
+//     }
+//     return `${this.name} is not flying at ${dist}`;
+//   }
+// }
+
+// class MagicFlySquirrel extends FlySquirrel {
+//   constructor(name, color, maxDistanse, arrSongs) {
+//     super(name, color, maxDistanse);
+//     this.arrSongs = arrSongs;
+//   }
+//   songSing() {
+//     this.arrSongs.forEach((song) => {
+//       console.log(`${this.name} is singing ${song}`);
+//     });
+//   }
+// }
+/*--------------------------------------------------------------------------------------------------------*/
+
+// const array = Array(20)
+//   .fill()
+//   .map(() => Math.floor(40 * Math.random()));
+// console.log(array);
+/*--------------------------------------------------------------------------------------------------------*/
+
+// class LinkedListIterator{
+//   constructor(list){
+//     this.collection = list;
+//     this.currentItem = null;
+//   }
+//   next(){
+//     this.currentItem = this.currentItem?this.currentItem.next: this.collection.head;
+//     return{
+//       value: this.currentItem ? this.currentItem.value: undefined,
+//       done: !this.currentItem,
+//     }
+//   }
+// }
+
+// class ListItem {
+//   constructor(value) {
+//     this.value = value;
+//     this.prev = null;
+//     this.next = null;
+//   }
+//   get value() {
+//     return this._value;
+//   }
+//   set value(value) {
+//     this._value = value;
+//   }
+// }
+// class LinkedList{
+//   constructor(...items){
+//     this.head = null;
+//     this.tail = null;
+//     this.length = 0;
+//     for (const item of items) {
+//       this.push(item)
+//     }
+//   }
+//   push(item){
+//     const newItem = new ListItem(value);
+//     if(this.length === 0){
+//       this.head = newItem;
+//       this.tail = newItem;
+//     }else{
+//       this.tail.next = newItem;
+//       newItem.prev = this.tail;
+//       this.tail = newItem;
+//     }
+//     return ++this.length;
+//   }
+// }
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+// class Stack {
+//   constructor(maxSize = 5, ...args) {
+//     this._maxSize = maxSize;
+//     this._size = 0;
+//     for (const arg of args) {
+//       this.push(argument);
+//     }
+//   }
+//   get size() {
+//     return this._size;
+//   }
+//   get empty() {
+//     return this._size === 0;
+//   }
+//   push(argument) {
+//     if (this._size >= this._maxSize) {
+//       throw new RangeError("stack overflow");
+//     }
+//     this["_" + this._size] = argument;
+//     return ++this._size;
+//   }
+//   pick() {
+//     return this["_" + this._size - 1];
+//   }
+//   pop() {
+//     const last = this["_" + this._size - 1];
+//     delete this["_" + this._size - 1];
+//     --this._size;
+//     return last;
+//   }
+// }
+
+// const stack1 = new Stack();
+// console.log(stack1);
+/*--------------------------------------------------------------------------------------------------------*/
+
+// const test = function (str) {
+//   let chars = str.split(""),
+//     stack = [],
+//     open = ["{", "(", "["],
+//     close = ["}", ")", "]"],
+//     closeIndex,
+//     openIndex;
+
+//   // Проходимся по строке, проверяя каждый ее символ .
+//   for (let i = 0, len = chars.length; i < len; i++) {
+//     openIndex = open.indexOf(chars[i]);
+//     if (openIndex !== -1) {
+//       // Нашли открывающую скобку. Помещаем ее в стек
+//       stack.push(openIndex);
+//       continue;
+//     }
+
+//     closeIndex = close.indexOf(chars[i]);
+//     if (closeIndex !== -1) {
+//       // Нашли закрывающую скобку. Проверяем ее соответствие открывающей
+//       openIndex = stack.pop();
+//       if (closeIndex !== openIndex) {
+//         return false;
+//       }
+//     }
+//   }
+
+//   // Проверяем дисбаланс открытых/закрытых скобок
+//   if (stack.length !== 0) {
+//     return false;
+//   }
+
+//   return true;
+// };
+/*--------------------------------------------------------------------------------------------------------*/
+
+// class Queue {
+//   constructor(...args) {
+//     this._head = 0;
+//     this._tail = 0;
+//   }
+//   get size() {
+//     return this._tail - this._head;
+//   }
+//   push(value) {
+//     this[this._tail] = value;
+//     this._tail++;
+//     return this.size;
+//   }
+//   shift() {
+//     const valueHead = this[this._head];
+//     delete this[this._head];
+//     this._head++;
+
+//     return valueHead;
+//   }
+// }
+/*--------------------------------------------------------------------------------------------------------*/
+
 
